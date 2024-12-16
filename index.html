@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Computer</title>
+    <!-- เพิ่ม Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- เพิ่ม Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(1, 109, 62); /* เปลี่ยนสีเป็นสีดำ */
+            display: inline-block;
+            padding-bottom: 10px; /* เว้นช่องด้านล่างขีด */
+            margin-left: 10%; /* เพิ่มช่องว่างด้านซ้าย */
+            margin-right: 10%; /* เพิ่มช่องว่างด้านขวา */
+        }   
+        .carousel-inner .carousel-item img {
+    width: 40% !important; /* ปรับความกว้างให้เต็ม */
+    object-fit: cover !important; /* ทำให้ภาพครอบคลุมพื้นที่ */
+    margin: 0 auto !important; /* ทำให้ภาพอยู่กลาง */
+}
+
+        body {
+            background-color: #e8ffcd;
+            background-image: url('');
+            background-size: contain;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        .header {
+            background-color: rgba(178, 230, 115, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .btn-custom {
+            margin-left: 10px;
+        }
+
+        .menu-icons {
+            margin: 20px 0;
+        }
+
+        .icon-item {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .icon-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .icon-item a:hover {
+            color: green;
+        }
+
+        .welcome {
+            text-align: center;
+            font-weight: bold;
+            color: #004400;
+            margin: 30px 0;
+        }
+
+        .bouncing-text {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #004400;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        #contact-section {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+            color: #004400;
+            margin-top: 60px;
+        }
+
+        .content {
+            padding-top: 100px;
+        }
+
+        /* สไตล์สำหรับหิมะตก */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            pointer-events: none;
+            font-size: 1.5rem;
+            color: white;
+            z-index: 9999;
+            user-select: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header text-white">
+        <h1><strong>Business Computer</strong></h1>
+        <p>Mahasarakham University</p>
+    </div>
+
+    <!-- Contact and Login Buttons -->
+    <div class="btn-container">
+        <!-- Contact Button -->
+        <a href="contact.html" class="btn btn-success btn-custom">Contact</a>
+        <!-- Login Button -->
+        <a href="login.html" class="btn btn-success btn-custom">Login</a>
+    </div>
+
+    <!-- Menu Icons Section -->
+    <div class="container text-center">
+        <div class="row menu-icons">
+            <div class="col-md-2 icon-item">
+                <a href="https://mbs.msu.ac.th/file_course/bachelor/BC/course.pdf">
+                    <i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i>
+                    <p>หลักสูตร</p>
+                </a>
+            </div>
+            <div class="col-md-2 icon-item">
+                <a href="https://regpr.msu.ac.th/assets/pdf/calendar/%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%A2%E0%B9%88%E0%B8%AD%202567.pdf">
+                    <i class="bi bi-calendar-event" style="font-size: 2rem;"></i>
+                    <p>ปฏิทินการศึกษา</p>
+                </a>
+            </div>
+            <div class="col-md-2 icon-item">
+                <a href="login.html">
+                    <i class="bi bi-book" style="font-size: 2rem;"></i>
+                    <p>สมัครเรียน</p>
+                </a>
+            </div>
+            <div class="col-md-2 icon-item">
+                <a href="lecturers.html">
+                    <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                    <p>อาจารย์</p>
+                </a>
+            </div>
+            <div class="col-md-2 icon-item">
+                <a href="scholarship.php">
+                    <i class="bi bi-piggy-bank-fill" style="font-size: 2rem;"></i>
+                    <p>กองทุนการศึกษา</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome">
+        <h1 class="bouncing-text">WELCOME TO <span style="color: green;">BC</span></h1>
+    </div>
+
+    <!-- Carousel Section -->
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                
+                <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t1.15752-9/466811140_1761323577985314_8980294217829686098_n.png?stp=dst-png_s2048x2048&_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEdem_OzRu9pEGr8Ozgly2ANc7NcIMR0Rw1zs1wgxHRHBJ9dR1qlROkDF9o5J25M3geBsrT9qNCedEEdNc837Oa&_nc_ohc=ozgUoq8ePZ4Q7kNvgGiPktS&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&oh=03_Q7cD1QFz81pV0qUlJVWCDPGJcPTvrEd7e_qsVM5xkFdeb5dW8w&oe=6787D6E2" class="d-block w-100" >
+            
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/453293911_979947110589208_6315711185691637735_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFfVEVDgeRbUQnR2ZTYgZAc8jBoOZBKxynyMGg5kErHKSDrKYZMLHz-CAsptzovRwR2OenNnT_jywXp2DJmZnNd&_nc_ohc=yafzmn0z86IQ7kNvgF6-s-w&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=Atu4m8Yo0iQJXAgaXK3xUOW&oh=00_AYAYFpJWo169TJ21bSAN7_T8V7zvGS-3nnqO3gxLpJWo_w&oe=67663C25" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/466478771_1052207273363191_4009140943689071951_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEmQrPu4oS3BFurmgTcnPPX2gFj23kcwHbaAWPbeRzAduv2GWyRnWJtg69mnzoRmdNeSTNKMX6MQjW5mmo4JcCj&_nc_ohc=1C7Z0RM_6wcQ7kNvgHQ5DpC&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=A9IdmPyKmS-yjH0oPnkx6LP&oh=00_AYA2Rj8S9QdBjMkkZyXV3NO8Aj18Nf6TFxrV01ZoHWSBrw&oe=67665EFF" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/469865058_1074805761103342_4392404329249140020_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHcMciU-lX9Kz8IhoWN5PxPFMfQ5c24-HIUx9Dlzbj4cgmDs5jiG911q0qMIi7TLMg18ChGiU-RdKbW-nyBIWh4&_nc_ohc=tTHHb8sS__0Q7kNvgHHeT-d&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=AD2-UOM1eSQfsjw9KgO1IBP&oh=00_AYBKaOHqhwtm6rn8e643AKuO4GFBAN8NDyY67U-k9kniig&oe=67663FA5" class="d-block w-100" >
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <body>
+        <div class="section-title">
+            <p>กิจกรรมเปิดบ้าน ประจำปี 2566 </p>
+        </div>
+    
+        <!-- Grid of Cards -->
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src ="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/412678744_846494603934460_87179940458604708_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEgQXlFY0l8U0xzxQuSkcZ0YByBiZId-WxgHIGJkh35bKu-_u1z-9uaMMrgtWEVr8XYApeE7OxirPEh4zbZJtXd&_nc_ohc=N85yWQc0pMMQ7kNvgF6KTZr&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=AOkNDTs2bGlDM1QYrF-x9Qi&oh=00_AYBGwvdcwAi0qk9iW884wg-ZUvuuaIaU-tonHhnEspOAkA&oe=6766682C" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/411315671_846502377267016_5212676664078662912_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGctrKjUlqUGmGsw96Oq1ROR2YgKMHXwMBHZiAowdfAwIrbJsCvhfZHXeGFlQ3QIN0lnbK7G-Q52lvxNwC0_GOM&_nc_ohc=TuO-j1hNltMQ7kNvgHLIC2y&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=AnzZNo5_tO6RvTEgOKP4hGA&oh=00_AYAnf4NXzoRmZw4-eNgyWpsxsmCz1ll0ooSQL6XNspTEfw&oe=676650CD" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/412867615_846505813933339_5125760623411034439_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEB2A0HSBEVSj0YIHcLz4UK4xjBeCQgpsnjGMF4JCCmyWcKui4A8sBGg_PgF62TRt2rImKxul_U7ezo-caiL7al&_nc_ohc=o8gWDDTsHBAQ7kNvgE6PnpV&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=Asp1OV77M7lwL8OqNb2cq9P&oh=00_AYAp6-o0oxUOVuFV8RmOeJvcPb6V8cSAQQ1r8V67skg0lA&oe=67664366" class="card-img-top" alt="...">
+                        <div class="card-body">
+                           
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="https://scontent.fkkc2-1.fna.fbcdn.net/v/t39.30808-6/412770662_846505393933381_6078156209951132176_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHy4rpSzRPgY_aaDhYLPdaI0OqyPtKPRhzQ6rI-0o9GHJuM1uJ5vRDYdcHTZOJjYJU2SzR4M5_v3vIw9rWJeQM1&_nc_ohc=Uk_0YMHRoY0Q7kNvgEDVO2g&_nc_zt=23&_nc_ht=scontent.fkkc2-1.fna&_nc_gid=AeJ0x8GuNjwdXdHzw1_X2d2&oh=00_AYBBMs4L5D2Sgx_0CtPVHyjwMOllkMCAS5Odj5XFlXdGkw&oe=67665B0A" class="card-img-top" alt="...">
+                        <div class="card-body">
+                         
+                        </div>
+                    </div>
+                </div>
+                <!-- เพิ่มการ์ดอื่น ๆ ตามต้องการ -->
+            </div>
+        </div>
+    
+    <div class="container"></div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card">
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- สร้างหิมะตก -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const snowflakes = ['❄', '❆', '❅'];
+            const numSnowflakes = 200;
+
+            for (let i = 0; i < numSnowflakes; i++) {
+                let snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+
+                document.body.appendChild(snowflake);
+
+                snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowflake.style.animation = `fall ${Math.random() * 5 + 5}s linear infinite`;
+
+                snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            }
+        });
+    </script>
+</body>
+</html>
